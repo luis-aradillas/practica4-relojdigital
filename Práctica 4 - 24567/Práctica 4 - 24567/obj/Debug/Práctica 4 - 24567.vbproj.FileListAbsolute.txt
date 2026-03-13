@@ -1,0 +1,12 @@
+C:\ARMANDO - 24567\Práctica 4 - 24567\Práctica 4 - 24567\bin\Debug\Práctica 4 - 24567.exe.config
+C:\ARMANDO - 24567\Práctica 4 - 24567\Práctica 4 - 24567\bin\Debug\Práctica 4 - 24567.exe
+C:\ARMANDO - 24567\Práctica 4 - 24567\Práctica 4 - 24567\bin\Debug\Práctica 4 - 24567.pdb
+C:\ARMANDO - 24567\Práctica 4 - 24567\Práctica 4 - 24567\bin\Debug\Práctica 4 - 24567.xml
+C:\ARMANDO - 24567\Práctica 4 - 24567\Práctica 4 - 24567\obj\Debug\Práctica 4 - 24567.vbprojAssemblyReference.cache
+C:\ARMANDO - 24567\Práctica 4 - 24567\Práctica 4 - 24567\obj\Debug\Práctica_4___24567.Form1.resources
+C:\ARMANDO - 24567\Práctica 4 - 24567\Práctica 4 - 24567\obj\Debug\Práctica_4___24567.Resources.resources
+C:\ARMANDO - 24567\Práctica 4 - 24567\Práctica 4 - 24567\obj\Debug\Práctica 4 - 24567.vbproj.GenerateResource.cache
+C:\ARMANDO - 24567\Práctica 4 - 24567\Práctica 4 - 24567\obj\Debug\Práctica 4 - 24567.vbproj.CoreCompileInputs.cache
+C:\ARMANDO - 24567\Práctica 4 - 24567\Práctica 4 - 24567\obj\Debug\Práctica 4 - 24567.exe
+C:\ARMANDO - 24567\Práctica 4 - 24567\Práctica 4 - 24567\obj\Debug\Práctica 4 - 24567.xml
+C:\ARMANDO - 24567\Práctica 4 - 24567\Práctica 4 - 24567\obj\Debug\Práctica 4 - 24567.pdb
