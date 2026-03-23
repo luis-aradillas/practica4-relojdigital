@@ -1,5 +1,7 @@
 ﻿Public Class Form1
     Dim formato As Boolean = True
+    Dim botonstart As Boolean = False
+    Dim cronotiempo As Integer = 0
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Timer1.Start()
         Timer2.Start()
@@ -46,30 +48,35 @@
         If colortexto = "Blanco" Then
             horas.ForeColor = Color.White
             minutos.ForeColor = Color.White
+            segundos.ForeColor = Color.White
             Label1.ForeColor = Color.White
             dias.ForeColor = Color.White
             fecha.ForeColor = Color.White
         ElseIf colortexto = "Rojo" Then
             horas.ForeColor = Color.Red
             minutos.ForeColor = Color.Red
+            segundos.ForeColor = Color.Red
             Label1.ForeColor = Color.Red
             dias.ForeColor = Color.Red
             fecha.ForeColor = Color.Red
         ElseIf colortexto = "Azul" Then
             horas.ForeColor = Color.Aqua
             minutos.ForeColor = Color.Aqua
+            segundos.ForeColor = Color.Aqua
             Label1.ForeColor = Color.Aqua
             dias.ForeColor = Color.Aqua
             fecha.ForeColor = Color.Aqua
         ElseIf colortexto = "Verde" Then
             horas.ForeColor = Color.LimeGreen
             minutos.ForeColor = Color.LimeGreen
+            segundos.ForeColor = Color.LimeGreen
             Label1.ForeColor = Color.LimeGreen
             dias.ForeColor = Color.LimeGreen
             fecha.ForeColor = Color.LimeGreen
         ElseIf colortexto = "Amarillo" Then
             horas.ForeColor = Color.Yellow
             minutos.ForeColor = Color.Yellow
+            segundos.ForeColor = Color.Yellow
             Label1.ForeColor = Color.Yellow
             dias.ForeColor = Color.Yellow
             fecha.ForeColor = Color.Yellow
@@ -84,5 +91,28 @@
             Button1.Text = "24h"
             formato = True
         End If
+    End Sub
+
+    Private Sub start_Click(sender As Object, e As EventArgs) Handles start.Click
+        If botonstart = False Then
+            Timer3.Enabled = True
+            botonstart = True
+            start.Text = "Detener"
+        ElseIf botonstart = True Then
+            Timer3.Enabled = False
+            botonstart = False
+            start.Text = "Iniciar"
+        End If
+    End Sub
+
+    Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
+        cronotiempo = 0
+        Timer3.Enabled = False
+        tiempo.Text = "0"
+    End Sub
+
+    Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
+        cronotiempo = cronotiempo + 1
+        tiempo.Text = cronotiempo.ToString()
     End Sub
 End Class
