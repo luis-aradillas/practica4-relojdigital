@@ -34,7 +34,7 @@ Partial Class Form1
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.config = New System.Windows.Forms.Panel()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cronometro = New System.Windows.Forms.Panel()
         Me.reset = New System.Windows.Forms.Button()
         Me.start = New System.Windows.Forms.Button()
         Me.tiempo = New System.Windows.Forms.Label()
@@ -44,10 +44,12 @@ Partial Class Form1
         Me.Label2 = New System.Windows.Forms.Label()
         Me.segundos = New System.Windows.Forms.Label()
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.config.SuspendLayout()
-        Me.Panel1.SuspendLayout()
+        Me.cronometro.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'horas
@@ -140,30 +142,30 @@ Partial Class Form1
         '
         'config
         '
-        Me.config.Controls.Add(Me.Panel1)
         Me.config.Controls.Add(Me.ComboBox1)
         Me.config.Controls.Add(Me.Button1)
         Me.config.Controls.Add(Me.Label2)
-        Me.config.Location = New System.Drawing.Point(152, 195)
+        Me.config.Location = New System.Drawing.Point(148, 257)
         Me.config.Name = "config"
-        Me.config.Size = New System.Drawing.Size(228, 239)
+        Me.config.Size = New System.Drawing.Size(228, 152)
         Me.config.TabIndex = 8
         Me.config.Visible = False
         '
-        'Panel1
+        'cronometro
         '
-        Me.Panel1.Controls.Add(Me.reset)
-        Me.Panel1.Controls.Add(Me.start)
-        Me.Panel1.Controls.Add(Me.tiempo)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(228, 239)
-        Me.Panel1.TabIndex = 3
+        Me.cronometro.Controls.Add(Me.reset)
+        Me.cronometro.Controls.Add(Me.start)
+        Me.cronometro.Controls.Add(Me.tiempo)
+        Me.cronometro.Controls.Add(Me.Label3)
+        Me.cronometro.Location = New System.Drawing.Point(149, 251)
+        Me.cronometro.Name = "cronometro"
+        Me.cronometro.Size = New System.Drawing.Size(227, 158)
+        Me.cronometro.TabIndex = 3
+        Me.cronometro.Visible = False
         '
         'reset
         '
-        Me.reset.Location = New System.Drawing.Point(125, 167)
+        Me.reset.Location = New System.Drawing.Point(126, 98)
         Me.reset.Name = "reset"
         Me.reset.Size = New System.Drawing.Size(75, 23)
         Me.reset.TabIndex = 7
@@ -172,7 +174,7 @@ Partial Class Form1
         '
         'start
         '
-        Me.start.Location = New System.Drawing.Point(31, 167)
+        Me.start.Location = New System.Drawing.Point(27, 98)
         Me.start.Name = "start"
         Me.start.Size = New System.Drawing.Size(75, 23)
         Me.start.TabIndex = 6
@@ -182,11 +184,12 @@ Partial Class Form1
         'tiempo
         '
         Me.tiempo.AutoSize = True
-        Me.tiempo.Location = New System.Drawing.Point(68, 65)
+        Me.tiempo.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tiempo.Location = New System.Drawing.Point(54, 53)
         Me.tiempo.Name = "tiempo"
-        Me.tiempo.Size = New System.Drawing.Size(13, 13)
+        Me.tiempo.Size = New System.Drawing.Size(126, 26)
         Me.tiempo.TabIndex = 5
-        Me.tiempo.Text = "0"
+        Me.tiempo.Text = "00:00:00.00"
         '
         'Label3
         '
@@ -203,7 +206,7 @@ Partial Class Form1
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Blanco", "Rojo", "Azul", "Amarillo", "Verde"})
-        Me.ComboBox1.Location = New System.Drawing.Point(56, 127)
+        Me.ComboBox1.Location = New System.Drawing.Point(56, 104)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 2
@@ -244,12 +247,25 @@ Partial Class Form1
         'Timer3
         '
         '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(349, 219)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(27, 27)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 10
+        Me.PictureBox3.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(544, 635)
+        Me.Controls.Add(Me.cronometro)
         Me.Controls.Add(Me.config)
+        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.segundos)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.fecha)
@@ -264,8 +280,9 @@ Partial Class Form1
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.config.ResumeLayout(False)
         Me.config.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.cronometro.ResumeLayout(False)
+        Me.cronometro.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -285,10 +302,11 @@ Partial Class Form1
     Friend WithEvents Button1 As Button
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents segundos As Label
-    Friend WithEvents Panel1 As Panel
+    Friend WithEvents cronometro As Panel
     Friend WithEvents Label3 As Label
     Friend WithEvents reset As Button
     Friend WithEvents start As Button
     Friend WithEvents tiempo As Label
     Friend WithEvents Timer3 As Timer
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

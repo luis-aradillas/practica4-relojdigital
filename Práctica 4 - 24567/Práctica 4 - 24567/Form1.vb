@@ -93,16 +93,23 @@
         End If
     End Sub
 
+    Private starttime As DateTime
+    Private elapsed As TimeSpan = TimeSpan.Zero
+
     Private Sub start_Click(sender As Object, e As EventArgs) Handles start.Click
+
         If botonstart = False Then
             Timer3.Enabled = True
             botonstart = True
             start.Text = "Detener"
+            starttime = DateTime.Now
         ElseIf botonstart = True Then
             Timer3.Enabled = False
             botonstart = False
             start.Text = "Iniciar"
+            elapsed += DateTime.Now - starttime
         End If
+
     End Sub
 
     Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
@@ -114,5 +121,13 @@
     Private Sub Timer3_Tick(sender As Object, e As EventArgs) Handles Timer3.Tick
         cronotiempo = cronotiempo + 1
         tiempo.Text = cronotiempo.ToString()
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        If cronometro.Visible = False Then
+            cronometro.Visible = True
+        ElseIf cronometro.Visible = True Then
+            cronometro.Visible = False
+        End If
     End Sub
 End Class
