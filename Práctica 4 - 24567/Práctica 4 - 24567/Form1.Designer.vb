@@ -52,6 +52,9 @@ Partial Class Form1
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Timer4 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.config.SuspendLayout()
@@ -281,19 +284,21 @@ Partial Class Form1
         '
         'temporizador
         '
+        Me.temporizador.Controls.Add(Me.Button5)
+        Me.temporizador.Controls.Add(Me.Button4)
         Me.temporizador.Controls.Add(Me.Button2)
         Me.temporizador.Controls.Add(Me.Button3)
         Me.temporizador.Controls.Add(Me.Label4)
         Me.temporizador.Controls.Add(Me.Label5)
         Me.temporizador.Location = New System.Drawing.Point(148, 239)
         Me.temporizador.Name = "temporizador"
-        Me.temporizador.Size = New System.Drawing.Size(227, 155)
+        Me.temporizador.Size = New System.Drawing.Size(227, 167)
         Me.temporizador.TabIndex = 8
         Me.temporizador.Visible = False
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(126, 98)
+        Me.Button2.Location = New System.Drawing.Point(27, 127)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 7
@@ -306,7 +311,7 @@ Partial Class Form1
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 6
-        Me.Button3.Text = "5 min"
+        Me.Button3.Text = "+1 min"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'Label4
@@ -329,6 +334,27 @@ Partial Class Form1
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Temporizador"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(126, 98)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 8
+        Me.Button4.Text = "+5 min"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(126, 127)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 9
+        Me.Button5.Text = "Reiniciar"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Timer4
+        '
         '
         'Form1
         '
@@ -393,4 +419,7 @@ Partial Class Form1
     Friend WithEvents Button3 As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button4 As Button
+    Friend WithEvents Timer4 As Timer
 End Class
